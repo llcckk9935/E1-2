@@ -1,0 +1,31 @@
+$ python -X utf8 -m unittest discover -s tests -v
+test_add_restart_delete_restart (test_game.GameTests.test_add_restart_delete_restart) ... ok
+test_backup_failure_blocks_overwrite (test_game.GameTests.test_backup_failure_blocks_overwrite) ... ok
+test_completed_game_and_restart_preserve_score_history (test_game.GameTests.test_completed_game_and_restart_preserve_score_history) ... ok
+test_corrupt_json_utf8_and_schema_are_backed_up (test_game.GameTests.test_corrupt_json_utf8_and_schema_are_backed_up) ... ok
+test_default_five_valid_questions (test_game.GameTests.test_default_five_valid_questions) ... ok
+test_delete_cancel (test_game.GameTests.test_delete_cancel) ... ok
+test_empty_list_survives_restart (test_game.GameTests.test_empty_list_survives_restart) ... ok
+test_hint_repeated_only_deducts_once (test_game.GameTests.test_hint_repeated_only_deducts_once) ... ok
+test_hint_wrong_answer_score_has_zero_floor (test_game.GameTests.test_hint_wrong_answer_score_has_zero_floor) ... ok
+test_interrupt_during_registration_does_not_add_partial_quiz (test_game.GameTests.test_interrupt_during_registration_does_not_add_partial_quiz) ... ok
+test_interruption_records_partial_game_without_high_score (test_game.GameTests.test_interruption_records_partial_game_without_high_score) ... ok
+test_malformed_history_recovers_all_data (test_game.GameTests.test_malformed_history_recovers_all_data) ... ok
+test_numeric_input_recovers_from_all_invalid_cases (test_game.GameTests.test_numeric_input_recovers_from_all_invalid_cases) ... ok
+test_question_count_retries (test_game.GameTests.test_question_count_retries) ... ok
+test_quiz_rejects_invalid_shapes_and_boolean_answer (test_game.GameTests.test_quiz_rejects_invalid_shapes_and_boolean_answer) ... ok
+test_random_selection_does_not_change_bank (test_game.GameTests.test_random_selection_does_not_change_bank) ... ok
+test_read_error_blocks_overwrite (test_game.GameTests.test_read_error_blocks_overwrite) ... ok
+test_required_text_retries_and_strips (test_game.GameTests.test_required_text_retries_and_strips) ... ok
+test_run_handles_eof_and_keyboard_interrupt_and_saves (test_game.GameTests.test_run_handles_eof_and_keyboard_interrupt_and_saves) ... ok
+test_subprocess_restart_and_foreign_working_directory (test_game.GameTests.test_subprocess_restart_and_foreign_working_directory) ... ok
+test_unplayed_displays_distinct_message (test_game.GameTests.test_unplayed_displays_distinct_message) ... ok
+test_write_failure_preserves_previous_file (test_game.GameTests.test_write_failure_preserves_previous_file) ... ok
+test_wrong_answer_does_not_lower_best (test_game.GameTests.test_wrong_answer_does_not_lower_best) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.306s
+
+OK
+
+Exit code: 0

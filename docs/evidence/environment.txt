@@ -1,0 +1,12 @@
+Python
+Python 3.14.7
+
+Git
+git version 2.55.0.windows.5
+
+Git author (public noreply)
+301666771+llcckk9935@users.noreply.github.com
+
+Editor: Visual Studio Code (installed command confirmed)
+Runtime dependencies: Python standard library only
+This is text evidence, not a desktop screenshot.
