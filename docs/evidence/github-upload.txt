@@ -1,0 +1,12 @@
+Target: https://github.com/llcckk9935/E1-2
+Connected GitHub repository lookup: HTTP 404 (Not Found).
+Connected tool has no repository creation capability.
+Local credential lookup: no usable credential returned.
+$ git -c credential.helper= push -u origin main (noninteractive)
+fatal: unable to access 'https://github.com/llcckk9935/E1-2.git/': schannel: AcquireCredentialsHandle failed: SEC_E_NO_CREDENTIALS (0x8009030e) - ���� ��Ű���� ����� �� �ִ� �������� �����ϴ�.
+Exit code: 128
+
+Retry using OpenSSL with certificate verification enabled:
+error: cannot spawn c:\Users\llcck\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass.sh: Permission denied
+fatal: could not read Username for 'https://github.com': terminal prompts disabled
+Exit code: 128

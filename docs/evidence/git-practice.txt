@@ -1,0 +1,142 @@
+Actual local Git exercise; this is not a GitHub upload.
+
+$ git init --bare -b main <project>\outputs\practice-remote
+Initialized empty Git repository in <project>/outputs/practice-remote/
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\git-history --work-tree=. remote add practice <project>\outputs\practice-remote
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\git-history --work-tree=. push practice main
+To <project>\outputs\practice-remote
+ * [new branch]      main -> main
+Exit code: 0
+
+$ git clone --separate-git-dir=<project>\outputs\clone-history <project>\outputs\practice-remote <project>\outputs\practice-clone
+Cloning into '<project>\outputs\practice-clone'...
+done.
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\clone-history --work-tree=<project>\outputs\practice-clone config user.name llcckk9935
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\clone-history --work-tree=<project>\outputs\practice-clone config user.email 301666771+llcckk9935@users.noreply.github.com
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\clone-history --work-tree=<project>\outputs\practice-clone add README.md
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\clone-history --work-tree=<project>\outputs\practice-clone commit -m "Docs: 복제본에서 README 변경 후 원본 pull 실습"
+[main b4352a1] Docs: 복제본에서 README 변경 후 원본 pull 실습
+ 1 file changed, 2 insertions(+)
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\clone-history --work-tree=<project>\outputs\practice-clone push origin main
+To <project>\outputs\practice-remote
+   6a4263d..b4352a1  main -> main
+Exit code: 0
+
+$ git --git-dir=<project>\outputs\git-history --work-tree=. pull --ff-only practice main
+Updating 6a4263d..b4352a1
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+From <project>\outputs\practice-remote
+ * branch            main       -> FETCH_HEAD
+   6a4263d..b4352a1  main       -> practice/main
+Exit code: 0
+
+Verified: README change from cloned directory is present in original work tree.
+
+$ C:\Users\llcck\AppData\Local\Programs\Python\Python314\python.exe -X utf8 -m unittest discover -s <project>\outputs\practice-clone\tests -v
+test_add_restart_delete_restart (test_game.GameTests.test_add_restart_delete_restart) ... ok
+test_backup_failure_blocks_overwrite (test_game.GameTests.test_backup_failure_blocks_overwrite) ... ok
+test_completed_game_and_restart_preserve_score_history (test_game.GameTests.test_completed_game_and_restart_preserve_score_history) ... ok
+test_corrupt_json_utf8_and_schema_are_backed_up (test_game.GameTests.test_corrupt_json_utf8_and_schema_are_backed_up) ... ok
+test_default_five_valid_questions (test_game.GameTests.test_default_five_valid_questions) ... ok
+test_delete_cancel (test_game.GameTests.test_delete_cancel) ... ok
+test_empty_list_survives_restart (test_game.GameTests.test_empty_list_survives_restart) ... ok
+test_hint_repeated_only_deducts_once (test_game.GameTests.test_hint_repeated_only_deducts_once) ... ok
+test_hint_wrong_answer_score_has_zero_floor (test_game.GameTests.test_hint_wrong_answer_score_has_zero_floor) ... ok
+test_interrupt_during_registration_does_not_add_partial_quiz (test_game.GameTests.test_interrupt_during_registration_does_not_add_partial_quiz) ... ok
+test_interruption_records_partial_game_without_high_score (test_game.GameTests.test_interruption_records_partial_game_without_high_score) ... ok
+test_malformed_history_recovers_all_data (test_game.GameTests.test_malformed_history_recovers_all_data) ... ok
+test_numeric_input_recovers_from_all_invalid_cases (test_game.GameTests.test_numeric_input_recovers_from_all_invalid_cases) ... ok
+test_question_count_retries (test_game.GameTests.test_question_count_retries) ... ok
+test_quiz_rejects_invalid_shapes_and_boolean_answer (test_game.GameTests.test_quiz_rejects_invalid_shapes_and_boolean_answer) ... ok
+test_random_selection_does_not_change_bank (test_game.GameTests.test_random_selection_does_not_change_bank) ... ok
+test_read_error_blocks_overwrite (test_game.GameTests.test_read_error_blocks_overwrite) ... ok
+test_required_text_retries_and_strips (test_game.GameTests.test_required_text_retries_and_strips) ... ok
+test_run_handles_eof_and_keyboard_interrupt_and_saves (test_game.GameTests.test_run_handles_eof_and_keyboard_interrupt_and_saves) ... ok
+test_subprocess_restart_and_foreign_working_directory (test_game.GameTests.test_subprocess_restart_and_foreign_working_directory) ... ok
+test_unplayed_displays_distinct_message (test_game.GameTests.test_unplayed_displays_distinct_message) ... ok
+test_write_failure_preserves_previous_file (test_game.GameTests.test_write_failure_preserves_previous_file) ... ok
+test_wrong_answer_does_not_lower_best (test_game.GameTests.test_wrong_answer_does_not_lower_best) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.305s
+
+OK
+Exit code: 0
+
+Fresh clone actual main.py: exit 0; default list displayed; state.json created in clone.
+저장 파일이 없어 기본 퀴즈로 시작합니다.
+
+=== 기초 상식 퀴즈 ===
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록
+4. 점수 확인
+5. 종료
+6. 퀴즈 삭제
+7. 게임 기록
+선택 (1~7): 
+등록된 퀴즈 목록 (총 5개)
+1. 일주일은 며칠일까요?
+2. 삼각형의 변은 몇 개일까요?
+3. 지구의 자연 위성은 무엇일까요?
+4. 물이 얼면 무엇이 될까요?
+5. 대한민국의 수도는 어디일까요?
+
+=== 기초 상식 퀴즈 ===
+1. 퀴즈 풀기
+2. 퀴즈 추가
+3. 퀴즈 목록
+4. 점수 확인
+5. 종료
+6. 퀴즈 삭제
+7. 게임 기록
+선택 (1~7): 파일에 저장했습니다.
+게임을 종료합니다.
+
+Fresh clone verification with working directory set to clone:
+$ python -X utf8 -m unittest discover -s tests -v
+test_add_restart_delete_restart (test_game.GameTests.test_add_restart_delete_restart) ... ok
+test_backup_failure_blocks_overwrite (test_game.GameTests.test_backup_failure_blocks_overwrite) ... ok
+test_completed_game_and_restart_preserve_score_history (test_game.GameTests.test_completed_game_and_restart_preserve_score_history) ... ok
+test_corrupt_json_utf8_and_schema_are_backed_up (test_game.GameTests.test_corrupt_json_utf8_and_schema_are_backed_up) ... ok
+test_default_five_valid_questions (test_game.GameTests.test_default_five_valid_questions) ... ok
+test_delete_cancel (test_game.GameTests.test_delete_cancel) ... ok
+test_empty_list_survives_restart (test_game.GameTests.test_empty_list_survives_restart) ... ok
+test_hint_repeated_only_deducts_once (test_game.GameTests.test_hint_repeated_only_deducts_once) ... ok
+test_hint_wrong_answer_score_has_zero_floor (test_game.GameTests.test_hint_wrong_answer_score_has_zero_floor) ... ok
+test_interrupt_during_registration_does_not_add_partial_quiz (test_game.GameTests.test_interrupt_during_registration_does_not_add_partial_quiz) ... ok
+test_interruption_records_partial_game_without_high_score (test_game.GameTests.test_interruption_records_partial_game_without_high_score) ... ok
+test_malformed_history_recovers_all_data (test_game.GameTests.test_malformed_history_recovers_all_data) ... ok
+test_numeric_input_recovers_from_all_invalid_cases (test_game.GameTests.test_numeric_input_recovers_from_all_invalid_cases) ... ok
+test_question_count_retries (test_game.GameTests.test_question_count_retries) ... ok
+test_quiz_rejects_invalid_shapes_and_boolean_answer (test_game.GameTests.test_quiz_rejects_invalid_shapes_and_boolean_answer) ... ok
+test_random_selection_does_not_change_bank (test_game.GameTests.test_random_selection_does_not_change_bank) ... ok
+test_read_error_blocks_overwrite (test_game.GameTests.test_read_error_blocks_overwrite) ... ok
+test_required_text_retries_and_strips (test_game.GameTests.test_required_text_retries_and_strips) ... ok
+test_run_handles_eof_and_keyboard_interrupt_and_saves (test_game.GameTests.test_run_handles_eof_and_keyboard_interrupt_and_saves) ... ok
+test_subprocess_restart_and_foreign_working_directory (test_game.GameTests.test_subprocess_restart_and_foreign_working_directory) ... ok
+test_unplayed_displays_distinct_message (test_game.GameTests.test_unplayed_displays_distinct_message) ... ok
+test_write_failure_preserves_previous_file (test_game.GameTests.test_write_failure_preserves_previous_file) ... ok
+test_wrong_answer_does_not_lower_best (test_game.GameTests.test_wrong_answer_does_not_lower_best) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.324s
+
+OK
+Exit code: 0
