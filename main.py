@@ -32,6 +32,15 @@ class QuizGame:
                 print(f"오답입니다. 정답은 {quiz.answer}번입니다.")
         score = round(correct / len(self.quizzes) * 100)
         print(f"결과: {len(self.quizzes)}문제 중 {correct}개 정답, {score}점")
+        if self.best_score is None or score > self.best_score:
+            self.best_score = score
+            print("새로운 최고 점수입니다!")
+
+    def show_score(self):
+        if self.best_score is None:
+            print("아직 끝까지 완료한 게임이 없습니다.")
+        else:
+            print(f"최고 점수: {self.best_score}점")
 
     def add_quiz(self):
         question = get_text("문제: ")
@@ -63,8 +72,8 @@ class QuizGame:
                     self.add_quiz()
                 elif menu == 3:
                     self.show_list()
-                else:
-                    print("기능을 준비 중입니다.")
+                elif menu == 4:
+                    self.show_score()
         except (KeyboardInterrupt, EOFError):
             print("\n입력이 중단되었습니다.")
         finally:
