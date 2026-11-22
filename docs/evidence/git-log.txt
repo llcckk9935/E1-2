@@ -1,0 +1,22 @@
+Actual graph snapshot before the evidence packaging commit.
+$ git log --oneline --graph --all
+* 7dd26a3 Docs: 실제 clone push pull 실습과 GitHub 인증 제한 기록
+* b4352a1 Docs: 복제본에서 README 변경 후 원본 pull 실습
+* 6a4263d Docs: 실행 안내 저장 스키마 코드 읽기와 실제 검증 자료 작성
+* c9847c9 Test: 재시작 손상 파일 입력 오류 중단과 선택 기능 23개 검증
+* c548769 Feat: 날짜별 게임 기록과 중단 게임 보존 및 기록 검증 구현
+* 2f90879 Feat: 취소와 확인 절차를 갖춘 퀴즈 삭제 및 저장 구현
+* 571b564 Feat: 문제별 한 번만 감점하는 힌트와 0점 하한 구현
+* 587bcd7 Feat: 문제 수 선택과 중복 없는 무작위 출제 구현
+* 65789db Feat: UTF-8 JSON 영속성과 손상 복구 및 안전한 파일 교체 구현
+* d24811d Feat: 미플레이 상태와 최고 점수 비교 갱신 구현
+* 4a07b63 Feat: 퀴즈 등록과 목록 조회 및 빈 목록 처리 구현
+*   22025c6 Merge: 퀴즈 풀기 기능을 main에 병합
+|\  
+| * 29d188f Feat: 별도 브랜치에서 퀴즈 출제와 정오답 결과 구현
+|/  
+* eba2d6c Feat: QuizGame 메뉴와 안전한 종료 흐름 구현
+* 9f7bb67 Feat: 기초 상식 기본 퀴즈 다섯 개와 힌트 작성
+* 79ebaaa Feat: Quiz 클래스와 문제 데이터 검증 구현
+* e2a2604 Feat: 공백 문자 빈 값 범위를 검사하는 입력 함수 구현
+* 32ae2bb Chore: 제출 저장소 초기화와 개인 학습 자료 제외
