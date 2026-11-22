@@ -114,3 +114,5 @@ python -X utf8 -m unittest discover -s tests -v
 ```
 
 테스트는 임시 폴더에서 동작하여 실제 `state.json`을 바꾸지 않습니다. [테스트 실행 기록](docs/evidence/tests.txt), [실제 프로그램 실행 기록](docs/evidence/run.txt), [제출 상태](docs/제출_상태.md)를 확인하세요.
+
+로컬 복제 실습에서 README 변경 → 커밋 → 업로드 → 원본 가져오기를 실제 확인했습니다. GitHub 업로드 상태는 제출 상태 문서를 따릅니다.
