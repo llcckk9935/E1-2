@@ -1,0 +1,14 @@
+# Personal study material; exclude from submission repository.
+개인학습_시험대비_답안지_제출제외.md
+개인학습_시험대비_답안지_제출제외.html
+개인학습_필수완성예시/
+실제_퀴즈_예시_복습노트.*
+E1-2_과제_도우미_지침서.md
+E1-2_미션_과제_원본.md
+__pycache__/
+*.py[cod]
+state.json
+state.json.*
+.venv/
+outputs/
+dist/
