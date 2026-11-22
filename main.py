@@ -93,6 +93,7 @@ class QuizGame:
     def show_menu(self):
         print("\n=== 기초 상식 퀴즈 ===")
         print("1. 퀴즈 풀기\n2. 퀴즈 추가\n3. 퀴즈 목록\n4. 점수 확인\n5. 종료")
+        print("6. 퀴즈 삭제")
 
     def play(self):
         if not self.quizzes:
@@ -153,11 +154,29 @@ class QuizGame:
         for number, quiz in enumerate(self.quizzes, start=1):
             print(f"{number}. {quiz.question}")
 
+    def delete_quiz(self):
+        if not self.quizzes:
+            print("등록된 퀴즈가 없습니다.")
+            return
+        self.show_list()
+        number = get_number("삭제할 문제 번호 (취소 0): ", 0, len(self.quizzes))
+        if number == 0:
+            print("삭제를 취소했습니다.")
+            return
+        quiz = self.quizzes[number - 1]
+        print(f"삭제할 문제: {quiz.question}")
+        if get_number("삭제 확인 (1: 삭제, 2: 취소): ", 1, 2) == 2:
+            print("삭제를 취소했습니다.")
+            return
+        self.quizzes.pop(number - 1)
+        print("퀴즈를 삭제했습니다.")
+        self.save()
+
     def run(self):
         try:
             while True:
                 self.show_menu()
-                menu = get_number("선택 (1~5): ", 1, 5)
+                menu = get_number("선택 (1~6): ", 1, 6)
                 if menu == 5:
                     break
                 if menu == 1:
@@ -168,6 +187,8 @@ class QuizGame:
                     self.show_list()
                 elif menu == 4:
                     self.show_score()
+                elif menu == 6:
+                    self.delete_quiz()
         except (KeyboardInterrupt, EOFError):
             print("\n입력이 중단되었습니다.")
         finally:
