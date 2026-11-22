@@ -2,6 +2,7 @@
 
 import json
 import os
+import random
 from pathlib import Path
 import shutil
 import tempfile
@@ -29,7 +30,7 @@ class QuizGame:
             with self.state_path.open(encoding="utf-8") as file:
                 data = json.load(file)
             if not isinstance(data, dict) or not isinstance(data["quizzes"], list):
-                raise ValueError("保存形式が不正")
+                raise ValueError("저장 데이터 구조가 잘못되었습니다.")
             best = data["best_score"]
             if best is not None and (type(best) is not int or not 0 <= best <= 100):
                 raise ValueError("최고 점수가 잘못되었습니다.")
@@ -97,9 +98,11 @@ class QuizGame:
         if not self.quizzes:
             print("등록된 퀴즈가 없습니다.")
             return
+        count = get_number(f"풀 문제 수 (1~{len(self.quizzes)}): ", 1, len(self.quizzes))
+        selected = random.sample(self.quizzes, count)
         correct = 0
-        for index, quiz in enumerate(self.quizzes, start=1):
-            print(f"\n[문제 {index}/{len(self.quizzes)}]")
+        for index, quiz in enumerate(selected, start=1):
+            print(f"\n[문제 {index}/{count}]")
             quiz.show()
             answer = get_number("정답 번호 (1~4): ", 1, 4)
             if quiz.check_answer(answer):
@@ -107,8 +110,8 @@ class QuizGame:
                 correct += 1
             else:
                 print(f"오답입니다. 정답은 {quiz.answer}번입니다.")
-        score = round(correct / len(self.quizzes) * 100)
-        print(f"결과: {len(self.quizzes)}문제 중 {correct}개 정답, {score}점")
+        score = round(correct / count * 100)
+        print(f"결과: {count}문제 중 {correct}개 정답, {score}점")
         if self.best_score is None or score > self.best_score:
             self.best_score = score
             print("새로운 최고 점수입니다!")
