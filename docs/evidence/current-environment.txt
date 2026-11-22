@@ -1,0 +1,20 @@
+실제 명령 실행 결과 — GitHub에서 clone한 제출 작업본
+
+$ python --version
+Python 3.14.7
+
+$ git --version
+git version 2.55.0.windows.5
+
+$ git config user.name
+llcckk9935
+
+$ git config user.email
+301666771+llcckk9935@users.noreply.github.com
+
+$ git remote -v
+origin	https://github.com/llcckk9935/E1-2.git (fetch)
+origin	https://github.com/llcckk9935/E1-2.git (push)
+
+$ git rev-parse --show-toplevel
+C:/Users/llcck/Desktop/AI개발/01코디세이/01코디세이-ALLINONE/02E1-2/submission

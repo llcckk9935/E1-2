@@ -16,3 +16,5 @@ dist/
 tools/
 docs/제출_상태.md
 docs/evidence/github-upload.txt
+# The parent workspace may keep this clean clone alongside personal study files.
+/submission/

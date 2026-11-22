@@ -1,0 +1,57 @@
+{
+  "source_commit": "ac9950d2d0e85f8a788da7738ed5276925c9db36",
+  "captured_at": "2026-11-22T19:27:43.860074+09:00",
+  "capture_method": "Actual native app window screenshots; live Python stdio viewer for gameplay, VS Code for actual Git/environment output files",
+  "source_files": {
+    "main.py": "a6d0b5fafbecac17866ce6da1f0de96b78b2d5be486007f38a6f6c66c2d4594c",
+    "quiz.py": "b396bd1912ba04789fcab902ed783dc91bf4adfffdd17c8eb57460c59e6aa1cc",
+    "input_helpers.py": "56b5e91f0d1e89a537d6047ae872587e44cf8496319f8c041935654836e3b371",
+    "default_quizzes.py": "02b8b6bb59f05833607949d1205c194e2abdfa77a7f4466da6140ffa28129c63"
+  },
+  "screenshots": {
+    "add_quiz.jpg": {
+      "bytes": 86494,
+      "sha256": "25a76674471d5c861efc0cdc7c92962fceaafc17a83c382d282000cd512c287e"
+    },
+    "environment.jpg": {
+      "bytes": 93307,
+      "sha256": "32457e249f84a8898a63d0b974d823af197ab111ef74c86a973eba060579a027"
+    },
+    "git_log.jpg": {
+      "bytes": 128984,
+      "sha256": "debd73579b02c0eea8b34db800407a52bb87ee427622275c8b312e73b4e79102"
+    },
+    "hint.jpg": {
+      "bytes": 98732,
+      "sha256": "5ed71940e24a0156b93cdd9e34d3a40a79cb8c8a609da83937751232235aa85d"
+    },
+    "list.jpg": {
+      "bytes": 97652,
+      "sha256": "0e4f513e2cda9919d487a44364ef1522da183ec21f3dfbe7a5e95ad5e89ef740"
+    },
+    "menu.jpg": {
+      "bytes": 62894,
+      "sha256": "475725d5f1bea512811c73525939851a04a538881d0f5847e5929ab02ad9dd61"
+    },
+    "play.jpg": {
+      "bytes": 95226,
+      "sha256": "e91eadf08840dbce002837b170fb7af1b3758cf0ef8ad487a63b02d88cc4c91b"
+    },
+    "restart.jpg": {
+      "bytes": 62715,
+      "sha256": "e57443cf579a58e9261ee95a08b4c67f351f253112e154053a154b9297cfacb1"
+    },
+    "restart_score.jpg": {
+      "bytes": 72006,
+      "sha256": "4c62d1107ddadf02f3119e58c267989f65351b9e4fd6eb39e9ea409454094146"
+    },
+    "result.jpg": {
+      "bytes": 93389,
+      "sha256": "63afa4d28dcae17c61e056a1640df7f3d8b96de998676247e97d3bfa5877bcd6"
+    },
+    "score.jpg": {
+      "bytes": 94239,
+      "sha256": "28fde0b9d05f7be1c975e0e24c2292ccca67458ed0ce0bd7ee01aa51fbb180f6"
+    }
+  }
+}

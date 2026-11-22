@@ -18,7 +18,7 @@ python main.py
 
 Windows에서 `python` 대신 Python 런처가 설치되어 있으면 `py -3 main.py`를 사용합니다. 한글 출력에 문제가 있으면 `python -X utf8 main.py`로 실행합니다.
 
-GitHub 업로드가 완료된 환경에서는 다음과 같이 복제할 수 있습니다.
+GitHub에 저장된 프로젝트를 다음과 같이 복제할 수 있습니다.
 
 ```sh
 git clone https://github.com/llcckk9935/E1-2.git
@@ -116,3 +116,15 @@ python -X utf8 -m unittest discover -s tests -v
 테스트는 임시 폴더에서 동작하여 실제 `state.json`을 바꾸지 않습니다. [테스트 실행 기록](docs/evidence/tests.txt)과 [실제 프로그램 실행 기록](docs/evidence/run.txt)을 확인하세요.
 
 로컬 복제 실습에서 README 변경 → 커밋 → 업로드 → 원본 가져오기를 실제 확인했습니다. 이 실습의 실행 기록은 `docs/evidence/git-practice.txt`에 있습니다.
+
+GitHub에서 새로 clone한 제출용 작업본에서도 코드와 22개 기존 커밋·병합 이력을 확인했습니다. 보완본의 GitHub push와 기존 작업본 pull 결과는 [원격 실습 기록](docs/evidence/github-practice.txt)에 기록합니다. 이 파일이 없다면 해당 보완본의 원격 실습은 아직 완료되지 않은 상태입니다.
+
+## 제출 스크린샷
+
+실제 실행 화면과 개발 환경·Git 그래프를 [스크린샷 안내](docs/screenshots/README.md)에 모았습니다.
+
+| 개발 환경 | 퀴즈 등록 | 목록 | 풀이 | 최고 점수 | Git 그래프 |
+| --- | --- | --- | --- | --- | --- |
+| [화면](docs/screenshots/environment.jpg) | [화면](docs/screenshots/add_quiz.jpg) | [화면](docs/screenshots/list.jpg) | [화면](docs/screenshots/play.jpg) | [화면](docs/screenshots/score.jpg) | [화면](docs/screenshots/git_log.jpg) |
+
+실행 화면은 최종 `main.py`의 실제 Python 프로세스에 입력과 출력을 연결한 캡처 도우미 창입니다. 개발 환경과 Git 그래프는 실제 명령 실행 결과를 VS Code에서 열어 캡처했습니다. 캡처 도우미는 게임 기능에 포함되지 않으며 별도 설치 없이 `python main.py`로 실행할 수 있습니다.

@@ -1,4 +1,5 @@
 $ python -X utf8 -m unittest discover -s tests -v
+Working directory: fresh GitHub clone (submission/)
 test_add_restart_delete_restart (test_game.GameTests.test_add_restart_delete_restart) ... ok
 test_backup_failure_blocks_overwrite (test_game.GameTests.test_backup_failure_blocks_overwrite) ... ok
 test_completed_game_and_restart_preserve_score_history (test_game.GameTests.test_completed_game_and_restart_preserve_score_history) ... ok
@@ -24,8 +25,6 @@ test_write_failure_preserves_previous_file (test_game.GameTests.test_write_failu
 test_wrong_answer_does_not_lower_best (test_game.GameTests.test_wrong_answer_does_not_lower_best) ... ok
 
 ----------------------------------------------------------------------
-Ran 23 tests in 0.306s
+Ran 23 tests in 0.302s
 
 OK
-
-Exit code: 0
