@@ -26,7 +26,7 @@ cd E1-2
 python main.py
 ```
 
-> 원격 저장소 생성·업로드와 화면 캡처의 실제 완료 여부는 [제출 상태](docs/제출_상태.md)를 확인하세요. 로컬 구현 완료와 GitHub 저장 완료를 구분했습니다.
+제출 대상으로 선정한 파일과 제외 기준은 [제출 파일 목록](docs/제출_파일_목록.md)을 확인하세요.
 
 ## 기능 목록
 
@@ -67,7 +67,7 @@ E1-2/
 ├── state.json                 # 실행 시 생성, Git 제외
 ├── tests/test_game.py          # 요구사항 검증
 ├── docs/코드_읽기_안내서.md
-├── docs/제출_상태.md
+├── docs/제출_파일_목록.md
 └── docs/evidence/              # 실제 테스트·실행·Git 작업 기록
 ```
 
@@ -113,6 +113,6 @@ E1-2/
 python -X utf8 -m unittest discover -s tests -v
 ```
 
-테스트는 임시 폴더에서 동작하여 실제 `state.json`을 바꾸지 않습니다. [테스트 실행 기록](docs/evidence/tests.txt), [실제 프로그램 실행 기록](docs/evidence/run.txt), [제출 상태](docs/제출_상태.md)를 확인하세요.
+테스트는 임시 폴더에서 동작하여 실제 `state.json`을 바꾸지 않습니다. [테스트 실행 기록](docs/evidence/tests.txt)과 [실제 프로그램 실행 기록](docs/evidence/run.txt)을 확인하세요.
 
-로컬 복제 실습에서 README 변경 → 커밋 → 업로드 → 원본 가져오기를 실제 확인했습니다. GitHub 업로드 상태는 제출 상태 문서를 따릅니다.
+로컬 복제 실습에서 README 변경 → 커밋 → 업로드 → 원본 가져오기를 실제 확인했습니다. 이 실습의 실행 기록은 `docs/evidence/git-practice.txt`에 있습니다.

@@ -12,3 +12,7 @@ state.json.*
 .venv/
 outputs/
 dist/
+# Local preparation scripts and publication status are not submission files.
+tools/
+docs/제출_상태.md
+docs/evidence/github-upload.txt
