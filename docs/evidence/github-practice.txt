@@ -1,0 +1,169 @@
+Actual GitHub exercise, recorded after successful clone/change/commit/push/original pull.
+$ git config --global --add safe.directory <workspace>
+
+Exit code: 0
+
+$ git config --global --add safe.directory <workspace>\submission
+
+Exit code: 0
+
+$ git --git-dir=<workspace>\.git for-each-ref --format=%(refname)
+
+Exit code: 0
+
+$ git -C <workspace>\submission status --porcelain
+
+Exit code: 0
+
+$ git -C <workspace>\submission push origin main
+To https://github.com/llcckk9935/E1-2.git
+   ac9950d..20d0bfd  main -> main
+Exit code: 0
+
+$ git clone https://github.com/llcckk9935/E1-2.git <workspace>\outputs\github-practice-20261122-195308
+Cloning into 'C:\Users\llcck\Desktop\AI媛쒕컻\01肄붾뵒?몄씠\01肄붾뵒?몄씠-ALLINONE\02E1-2\outputs\github-practice-20261122-195308'...
+Exit code: 0
+
+$ git -C <workspace>\outputs\github-practice-20261122-195308 config user.name llcckk9935
+
+Exit code: 0
+
+$ git -C <workspace>\outputs\github-practice-20261122-195308 config user.email 301666771+llcckk9935@users.noreply.github.com
+
+Exit code: 0
+
+$ git -C <workspace>\outputs\github-practice-20261122-195308 log --oneline --graph --all
+* 20d0bfd Docs: ?ㅼ젣 ?ㅽ뻾 ?ㅽ겕由곗꺑 11媛쒖? GitHub 蹂듭젣蹂?寃利?蹂댁셿
+*   ac9950d Merge: ?ъ슜?먭? 留뚮뱺 GitHub 珥덇린 ?대젰???쒖텧臾쇨낵 ?곌껐
+|\  
+| * e8df31e Initial commit
+* 92953d6 Chore: 理쒖쥌 ?쒖텧 ?뚯씪留??좎젙?섍퀬 ?묒뾽???먮즺 ?쒖쇅
+* 5769edf Docs: ?쒖텧???ㅼ젣 Git 釉뚮옖移?洹몃옒??湲곕줉
+* 7dd26a3 Docs: ?ㅼ젣 clone push pull ?ㅼ뒿怨?GitHub ?몄쬆 ?쒗븳 湲곕줉
+* b4352a1 Docs: 蹂듭젣蹂몄뿉??README 蹂寃????먮낯 pull ?ㅼ뒿
+* 6a4263d Docs: ?ㅽ뻾 ?덈궡 ????ㅽ궎留?肄붾뱶 ?쎄린? ?ㅼ젣 寃利??먮즺 ?묒꽦
+* c9847c9 Test: ?ъ떆???먯긽 ?뚯씪 ?낅젰 ?ㅻ쪟 以묐떒怨??좏깮 湲곕뒫 23媛?寃利?* c548769 Feat: ?좎쭨蹂?寃뚯엫 湲곕줉怨?以묐떒 寃뚯엫 蹂댁〈 諛?湲곕줉 寃利?援ы쁽
+* 2f90879 Feat: 痍⑥냼? ?뺤씤 ?덉감瑜?媛뽰텣 ?댁쫰 ??젣 諛????援ы쁽
+* 571b564 Feat: 臾몄젣蹂???踰덈쭔 媛먯젏?섎뒗 ?뚰듃? 0???섑븳 援ы쁽
+* 587bcd7 Feat: 臾몄젣 ???좏깮怨?以묐났 ?녿뒗 臾댁옉??異쒖젣 援ы쁽
+* 65789db Feat: UTF-8 JSON ?곸냽?깃낵 ?먯긽 蹂듦뎄 諛??덉쟾???뚯씪 援먯껜 援ы쁽
+* d24811d Feat: 誘명뵆?덉씠 ?곹깭? 理쒓퀬 ?먯닔 鍮꾧탳 媛깆떊 援ы쁽
+* 4a07b63 Feat: ?댁쫰 ?깅줉怨?紐⑸줉 議고쉶 諛?鍮?紐⑸줉 泥섎━ 援ы쁽
+*   22025c6 Merge: ?댁쫰 ?湲?湲곕뒫??main??蹂묓빀
+|\  
+| * 29d188f Feat: 蹂꾨룄 釉뚮옖移섏뿉???댁쫰 異쒖젣? ?뺤삤??寃곌낵 援ы쁽
+|/  
+* eba2d6c Feat: QuizGame 硫붾돱? ?덉쟾??醫낅즺 ?먮쫫 援ы쁽
+* 9f7bb67 Feat: 湲곗큹 ?곸떇 湲곕낯 ?댁쫰 ?ㅼ꽢 媛쒖? ?뚰듃 ?묒꽦
+* 79ebaaa Feat: Quiz ?대옒?ㅼ? 臾몄젣 ?곗씠??寃利?援ы쁽
+* e2a2604 Feat: 怨듬갚 臾몄옄 鍮?媛?踰붿쐞瑜?寃?ы븯???낅젰 ?⑥닔 援ы쁽
+* 32ae2bb Chore: ?쒖텧 ??μ냼 珥덇린?붿? 媛쒖씤 ?숈뒿 ?먮즺 ?쒖쇅
+Exit code: 0
+
+Actual fresh GitHub clone test output:
+test_add_restart_delete_restart (test_game.GameTests.test_add_restart_delete_restart) ... ok
+test_backup_failure_blocks_overwrite (test_game.GameTests.test_backup_failure_blocks_overwrite) ... ok
+test_completed_game_and_restart_preserve_score_history (test_game.GameTests.test_completed_game_and_restart_preserve_score_history) ... ok
+test_corrupt_json_utf8_and_schema_are_backed_up (test_game.GameTests.test_corrupt_json_utf8_and_schema_are_backed_up) ... ok
+test_default_five_valid_questions (test_game.GameTests.test_default_five_valid_questions) ... ok
+test_delete_cancel (test_game.GameTests.test_delete_cancel) ... ok
+test_empty_list_survives_restart (test_game.GameTests.test_empty_list_survives_restart) ... ok
+test_hint_repeated_only_deducts_once (test_game.GameTests.test_hint_repeated_only_deducts_once) ... ok
+test_hint_wrong_answer_score_has_zero_floor (test_game.GameTests.test_hint_wrong_answer_score_has_zero_floor) ... ok
+test_interrupt_during_registration_does_not_add_partial_quiz (test_game.GameTests.test_interrupt_during_registration_does_not_add_partial_quiz) ... ok
+test_interruption_records_partial_game_without_high_score (test_game.GameTests.test_interruption_records_partial_game_without_high_score) ... ok
+test_malformed_history_recovers_all_data (test_game.GameTests.test_malformed_history_recovers_all_data) ... ok
+test_numeric_input_recovers_from_all_invalid_cases (test_game.GameTests.test_numeric_input_recovers_from_all_invalid_cases) ... ok
+test_question_count_retries (test_game.GameTests.test_question_count_retries) ... ok
+test_quiz_rejects_invalid_shapes_and_boolean_answer (test_game.GameTests.test_quiz_rejects_invalid_shapes_and_boolean_answer) ... ok
+test_random_selection_does_not_change_bank (test_game.GameTests.test_random_selection_does_not_change_bank) ... ok
+test_read_error_blocks_overwrite (test_game.GameTests.test_read_error_blocks_overwrite) ... ok
+test_required_text_retries_and_strips (test_game.GameTests.test_required_text_retries_and_strips) ... ok
+test_run_handles_eof_and_keyboard_interrupt_and_saves (test_game.GameTests.test_run_handles_eof_and_keyboard_interrupt_and_saves) ... ok
+test_subprocess_restart_and_foreign_working_directory (test_game.GameTests.test_subprocess_restart_and_foreign_working_directory) ... ok
+test_unplayed_displays_distinct_message (test_game.GameTests.test_unplayed_displays_distinct_message) ... ok
+test_write_failure_preserves_previous_file (test_game.GameTests.test_write_failure_preserves_previous_file) ... ok
+test_wrong_answer_does_not_lower_best (test_game.GameTests.test_wrong_answer_does_not_lower_best) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.274s
+
+OK
+$ git -C <workspace>\outputs\github-practice-20261122-195308 add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+Exit code: 0
+
+$ git -C <workspace>\outputs\github-practice-20261122-195308 commit -m Docs: 실제 GitHub 복제본 수정과 push 실습
+[main e4ce61c] Docs: ?ㅼ젣 GitHub 蹂듭젣蹂??섏젙怨?push ?ㅼ뒿
+ 1 file changed, 2 insertions(+)
+Exit code: 0
+
+$ git -C <workspace>\outputs\github-practice-20261122-195308 push origin main
+To https://github.com/llcckk9935/E1-2.git
+   20d0bfd..e4ce61c  main -> main
+Exit code: 0
+
+$ git --git-dir=<workspace>\outputs\git-history --work-tree=<workspace> pull --ff-only origin main
+From https://github.com/llcckk9935/E1-2
+ * branch            main       -> FETCH_HEAD
+   ac9950d..e4ce61c  main       -> origin/main
+Updating ac9950d..e4ce61c
+Fast-forward
+ .gitignore                                         |   2 +
+ README.md                                          |  16 +++++-
+ docs/evidence/capture-manifest.json                |  57 +++++++++++++++++++++
+ docs/evidence/current-environment.txt              |  20 ++++++++
+ docs/evidence/current-git-log.txt                  |  27 ++++++++++
+ docs/evidence/remote-check.txt                     |   3 ++
+ docs/evidence/tests.txt                            |   5 +-
+ docs/screenshots/README.md                         |  30 +++++++++++
+ docs/screenshots/add_quiz.jpg                      | Bin 0 -> 86494 bytes
+ docs/screenshots/environment.jpg                   | Bin 0 -> 93307 bytes
+ docs/screenshots/git_log.jpg                       | Bin 0 -> 128984 bytes
+ docs/screenshots/hint.jpg                          | Bin 0 -> 98732 bytes
+ docs/screenshots/list.jpg                          | Bin 0 -> 97652 bytes
+ docs/screenshots/menu.jpg                          | Bin 0 -> 62894 bytes
+ docs/screenshots/play.jpg                          | Bin 0 -> 95226 bytes
+ docs/screenshots/restart.jpg                       | Bin 0 -> 62715 bytes
+ docs/screenshots/restart_score.jpg                 | Bin 0 -> 72006 bytes
+ docs/screenshots/result.jpg                        | Bin 0 -> 93389 bytes
+ docs/screenshots/score.jpg                         | Bin 0 -> 94239 bytes
+ ...14\214\354\235\274_\353\252\251\353\241\235.md" |   7 +++
+ ...40\234\354\266\234_\352\262\200\354\246\235.md" |  26 ++++++++++
+ 21 files changed, 189 insertions(+), 4 deletions(-)
+ create mode 100644 docs/evidence/capture-manifest.json
+ create mode 100644 docs/evidence/current-environment.txt
+ create mode 100644 docs/evidence/current-git-log.txt
+ create mode 100644 docs/evidence/remote-check.txt
+ create mode 100644 docs/screenshots/README.md
+ create mode 100644 docs/screenshots/add_quiz.jpg
+ create mode 100644 docs/screenshots/environment.jpg
+ create mode 100644 docs/screenshots/git_log.jpg
+ create mode 100644 docs/screenshots/hint.jpg
+ create mode 100644 docs/screenshots/list.jpg
+ create mode 100644 docs/screenshots/menu.jpg
+ create mode 100644 docs/screenshots/play.jpg
+ create mode 100644 docs/screenshots/restart.jpg
+ create mode 100644 docs/screenshots/restart_score.jpg
+ create mode 100644 docs/screenshots/result.jpg
+ create mode 100644 docs/screenshots/score.jpg
+ create mode 100644 "docs/\354\265\234\354\242\205_\354\240\234\354\266\234_\352\262\200\354\246\235.md"
+Exit code: 0
+
+$ git -C <workspace>\submission pull --ff-only origin main
+From https://github.com/llcckk9935/E1-2
+ * branch            main       -> FETCH_HEAD
+   20d0bfd..e4ce61c  main       -> origin/main
+Updating 20d0bfd..e4ce61c
+Fast-forward
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+Exit code: 0
+
+$ git --git-dir=<workspace>\outputs\git-history rev-parse HEAD
+e4ce61c4163710b0841f7afb9da4326664df6de0
+Exit code: 0
+
+$ git -C <workspace>\outputs\github-practice-20261122-195308 rev-parse HEAD
+e4ce61c4163710b0841f7afb9da4326664df6de0
+Exit code: 0
