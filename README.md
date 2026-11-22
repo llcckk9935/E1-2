@@ -128,3 +128,5 @@ GitHub에서 새로 clone한 제출용 작업본에서도 코드와 22개 기존
 | [화면](docs/screenshots/environment.jpg) | [화면](docs/screenshots/add_quiz.jpg) | [화면](docs/screenshots/list.jpg) | [화면](docs/screenshots/play.jpg) | [화면](docs/screenshots/score.jpg) | [화면](docs/screenshots/git_log.jpg) |
 
 실행 화면은 최종 `main.py`의 실제 Python 프로세스에 입력과 출력을 연결한 캡처 도우미 창입니다. 개발 환경과 Git 그래프는 실제 명령 실행 결과를 VS Code에서 열어 캡처했습니다. 캡처 도우미는 게임 기능에 포함되지 않으며 별도 설치 없이 `python main.py`로 실행할 수 있습니다.
+
+GitHub에서 새로 clone한 폴더의 README를 수정·commit·push하고 기존 작업본에서 pull하는 실습을 완료했습니다.
