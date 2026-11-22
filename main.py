@@ -101,16 +101,28 @@ class QuizGame:
         count = get_number(f"풀 문제 수 (1~{len(self.quizzes)}): ", 1, len(self.quizzes))
         selected = random.sample(self.quizzes, count)
         correct = 0
+        hints_used = 0
         for index, quiz in enumerate(selected, start=1):
             print(f"\n[문제 {index}/{count}]")
             quiz.show()
-            answer = get_number("정답 번호 (1~4): ", 1, 4)
+            hint_used = False
+            while True:
+                answer = get_number("정답 번호 (1~4, 힌트 0): ", 0, 4)
+                if answer != 0:
+                    break
+                print(f"힌트: {quiz.hint}")
+                if not hint_used:
+                    hints_used += 1
+                    hint_used = True
+                    print("힌트 사용으로 최종 점수에서 10점 차감합니다.")
+                else:
+                    print("이미 확인한 힌트입니다. 추가 감점은 없습니다.")
             if quiz.check_answer(answer):
                 print("정답입니다!")
                 correct += 1
             else:
                 print(f"오답입니다. 정답은 {quiz.answer}번입니다.")
-        score = round(correct / count * 100)
+        score = max(0, round(correct / count * 100) - hints_used * 10)
         print(f"결과: {count}문제 중 {correct}개 정답, {score}점")
         if self.best_score is None or score > self.best_score:
             self.best_score = score
